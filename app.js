@@ -50,7 +50,7 @@ function draw(){ // 눈덩이 만들기
   ctx.font = '20px serif';
   ctx.strokeStyle = "#fff"
   for(i=0; i<10; i++){
-    ctx.strokeText('거북이 짜증나', Math.random()*700 , Math.random()*700);
+    ctx.strokeText("눈좋아", Math.random()*700 , Math.random()*700);
   }
 }
 draw()
