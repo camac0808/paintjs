@@ -47,9 +47,14 @@ function draw(){ // 눈덩이 만들기
     ctx.fillStyle = "rgba(255,255,255,"+(0.1+Math.random())+")";
     ctx.fill();
   }
+  ctx.font = '20px serif';
+  ctx.strokeStyle = "#fff"
+  for(i=0; i<10; i++){
+    ctx.strokeText('거북이 짜증나', Math.random()*700 , Math.random()*700);
+  }
 }
 draw()
-setInterval(draw, 2000)
+setInterval(draw, 1800)
 
 
 if (canvas) {
