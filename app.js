@@ -31,19 +31,25 @@ function onMouseDown(event) {
   painting = true;
 }
 
-function mouseClick(event){
+function mouseClick(event){ 
   const x = event.offsetX;
   const y = event.offsetY;
   
 }
-ctx.fillStyle='#52a2b9'
-ctx.fillRect(0, 0, 700, 700)
-for(var i=0; i<15; i++){
-  ctx.beginPath();
-  ctx.arc(Math.random()*700, Math.random()*700, 5+Math.random()*10, 0, Math.PI*2)
-  ctx.fillStyle = "rgba(255,255,255,"+(0.1+Math.random())+")";
-  ctx.fill();
+
+function draw(){ // 눈덩이 만들기
+  let color = ["#2197b8", "#379ebb","#52a2b9", "#add2f7", "#c4dffa", "#d9ebfc"];
+  ctx.fillStyle= color[Math.floor(Math.random()*6)];
+  ctx.fillRect(0, 0, 700, 700)
+  for(var i=0; i<15; i++){
+    ctx.beginPath();
+    ctx.arc(Math.random()*700, Math.random()*700, 5+Math.random()*10, 0, Math.PI*2)
+    ctx.fillStyle = "rgba(255,255,255,"+(0.1+Math.random())+")";
+    ctx.fill();
+  }
 }
+draw()
+setInterval(draw, 2000)
 
 
 if (canvas) {
