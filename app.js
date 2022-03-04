@@ -37,8 +37,6 @@ function onMouseMove(event) {
   }
 }
 
-
-
 function handleColorClick(event) {
   const color = event.target.style.backgroundColor;
   ctx.strokeStyle = color; // 선색 지정
@@ -77,15 +75,15 @@ if (mode) {
   mode.addEventListener("click", handleModeClick);
 }
 
-function contextMenu(event){ // 우클릭 방지
+function contextMenu(event) { // 우클릭 방지
   event.preventDefault();
 }
 
-if (save){
+if (save) {
   save.addEventListener("click", saveClick);
 }
 
-function saveClick(){
+function saveClick() {
   const image = canvas.toDataURL();
   const link = document.createElement("a");
   link.href = image; // href가 주소값이여야 되고 download는 파일이름이여야 한다.
